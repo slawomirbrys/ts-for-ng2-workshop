@@ -19,39 +19,42 @@ function filter(list, filteringAlgorithm) {
 
 function testFilter() {
   var names:string[] = ["Bob", "Ed", "Brian", "Ben", "Kate"];
-  var startingWithB:Function = function (name) {
-    return name[0].toUpperCase() === "B";
+  var startingWithB:Function = function (name, i) {
+    //return name[0].toUpperCase() === "B";
+    return i % 2 === 0;
   };
   var namesStartingWithB:string[] = filter(names, startingWithB);
   console.log("filter:", namesStartingWithB);
 }
 
 // TODO: reduce
-function reduce(list, iterator) {
-}
-
-// TODO: merge
-function merge(destination, source) {
-}
-
-function testMerge() {
-  // should return => {xxx: "qq", yyy: 2, zzz: 3}
-  console.log("merge:", merge({xxx: 1, yyy: 2}, {xxx: "qq", zzz: 3}));
+function reduce(list, iterator, startMemo) {
 }
 
 function testReduce() {
   var sumFn:Function = function (memo:any, item:any, index:number, list:any[]):any {
-    return memo + item;
+    if (index % 2 == 0)
+      return memo + item;
+    else
+      return memo - item;
   };
   // should return => 14
-  console.log("reduce 1:", reduce([2, 5, 7], sumFn));
+  console.log("reduce 1:", reduce([2, 5, 7], sumFn, -10));
 
-  var mergeFn = function (memo:any, item:any, index:number, list:any[]):any {
-    return merge(memo, item);
+
+  var strReducer:Function = function (memo:any, item:any):any {
+    return memo + item;
   };
-  // should return => {name: "bob", age: 12, sex: "M"}
-  console.log("reduce 2:", reduce([{name: "bob"}, {age: 12}, {sex: "M"}], mergeFn));
+  // should return => "XXX: Ala ma kota!"
+  console.log("reduce 2:", reduce(["Ala ", "ma ", "kota!"], strReducer, "XXX: "));
+
+  var arrReducer:Function = function (memo:any, arr:any):any {
+    return memo.concat(arr);
+  };
+  // should return => []
+  console.log("reduce 3:", reduce([["a"], ["b"]], strReducer, ["z", "y"]));
 }
+
 
 // TODO: all
 function all(list, test) {
@@ -107,3 +110,27 @@ function testGroupBy() {
   };
   console.log("groupBy 2:", groupBy(names, byFirstLetter));
 }
+
+function eachSlice(list, iteratorFn, sliceSize) {
+
+}
+
+function eachSliceTest() {
+  var arr:number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  var fn = function (slice:any[], index:number):void {
+    console.log("slice:", slice, "index:", index);
+  };
+
+  eachSlice(arr, fn, 3);
+  //
+  // => slice: [1, 2, 3] index: 0
+  // => slice: [4, 5, 6] index: 1
+  // => slice: [7, 8, 9] index: 2
+  // => slice: [10] index: 3
+
+  eachSlice(arr, fn, 6);
+  // => slice: [1, 2, 3, 4, 5, 6] index: 0
+  // => slice: [7, 8, 9, 10] index: 1
+}
+
