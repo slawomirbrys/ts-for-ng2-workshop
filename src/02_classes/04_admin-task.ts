@@ -25,10 +25,11 @@ function adminTest() {
 
   // TODO: uncomment
   /*
-  var admin:Admin = new Admin({
+  var params = {
     login: login,
     password: passwd
-  });
+  };
+  var admin:Admin = new Admin(params);
 
   console.assert(admin.uuid == 0, "uuid should eq 0");
   console.assert(admin.getLogin() == login, "getLogin() should eq login");
