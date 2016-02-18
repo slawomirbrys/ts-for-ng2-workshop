@@ -1,0 +1,15 @@
+{
+  "name": "ts-for-ng2-workshop",
+  "version": "0.1.0",
+  "dependencies": {
+    "typescript": "1.7.5",
+    "tsd": "0.6.5"
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "start": "npm run tsc:w"
+  }
+}
