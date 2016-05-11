@@ -1,26 +1,28 @@
-/*
- random(max) function
- Returns psuedo random number between [0, and max)
- */
-function random(max) {
+var age:number = 12;
+
+
+var cities:string[] = ["Krakow"];
+
+var isOk:boolean = true;
+
+var bob:Object = {name: "bobek"};
+
+var something:any;
+something = 123;
+something = "qq";
+something = [];
+
+var nothing:void;
+
+var fn:Function = function () {};
+
+function toStr(age:number, name:string, ...otherArgs:number[]):string {
+  console.log("arguments", arguments, "other", otherArgs);
+
+  return "qq";
 }
 
-console.log("random:", random(10));
 
-/*
- randomBetween(min, max) function
- Returns pseudo random number between [min, max)
- * */
-function randomBetween(min, max) {
-}
-
-console.log("randomBetween:", randomBetween(15, 20));
-
-/*
- * div(dividend, divisor)
- * Example 13 div 4 == 3
- * */
-function div(dividend, divisor) {
-}
-
-console.log("div:", div(13, 4));
+toStr(12, "b");
+toStr(12, "q", 997, -88.8);
+toStr(12, "aaa", 1, 2, 3, 4, 5);

@@ -11,6 +11,9 @@ console.log("reverse:", reverse("abc"));
  * Usage:
  * reverseEachWord("abc xyz") => "cba zyx"
  * */
+
+var names:string[] = ["bob", "ed"];
+
 function reverseEachWord(input) {
 }
 

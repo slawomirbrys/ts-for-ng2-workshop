@@ -1,0 +1,10 @@
+1) from file: src/01_basics/04_functions export functions:
+  a) map()
+  b) reduce()
+  c) eachSlice() (DEFAULT!)
+
+2) from file: src/04_generics/02_array_list export:
+  a) Iterator<T>
+  b) ArrayList<T> (DEFAULT!)
+
+3) import all mentioned above functions/classes to this file & use them
