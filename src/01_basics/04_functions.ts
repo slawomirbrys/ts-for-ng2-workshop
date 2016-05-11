@@ -32,27 +32,33 @@ function reduce(list, iterator, startMemo) {
 }
 
 function testReduce() {
+  var result = reduce([1, 4, 8], function (memo, el) {
+    return memo + el;
+  }, 5);
+  
   var sumFn:Function = function (memo:any, item:any, index:number, list:any[]):any {
     if (index % 2 == 0)
       return memo + item;
     else
       return memo - item;
   };
-  // should return => 14
+  // should return => -6
   console.log("reduce 1:", reduce([2, 5, 7], sumFn, -10));
 
 
   var strReducer:Function = function (memo:any, item:any):any {
     return memo + item;
   };
+
+  var res = reduce(["Ala ", "ma ", "kota!"], strReducer, "XXX: ");
   // should return => "XXX: Ala ma kota!"
-  console.log("reduce 2:", reduce(["Ala ", "ma ", "kota!"], strReducer, "XXX: "));
+  console.log("reduce 2:", res);
 
   var arrReducer:Function = function (memo:any, arr:any):any {
     return memo.concat(arr);
   };
-  // should return => []
-  console.log("reduce 3:", reduce([["a"], ["b"]], strReducer, ["z", "y"]));
+  // should return => ["z", "y", "a", "b"]
+  console.log("reduce 3:", reduce([["a"], ["b"]], arrReducer, ["z", "y"]));
 }
 
 
@@ -122,7 +128,7 @@ function eachSliceTest() {
     console.log("slice:", slice, "index:", index);
   };
 
-  eachSlice(arr, fn, 3);
+  eachSlice(arr, fn, 5);
   //
   // => slice: [1, 2, 3] index: 0
   // => slice: [4, 5, 6] index: 1
