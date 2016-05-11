@@ -4,5 +4,5 @@ https://nodejs.org/
 2. Install TypeScript. Open console and run:
 npm install -g typescript
 
-3. Install TypeScript Definition(TSD) manager. Open console and run:
-npm install -g tsd
+3. Install Typings - TS definition manager. Open console and run:
+npm install -g typings

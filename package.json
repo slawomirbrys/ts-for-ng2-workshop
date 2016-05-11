@@ -2,8 +2,8 @@
   "name": "ts-for-ng2-workshop",
   "version": "0.1.0",
   "dependencies": {
-    "typescript": "1.7.5",
-    "tsd": "0.6.5"
+    "typescript": "1.8.10",
+    "typings": "0.8.1"
   },
   "devDependencies": {
   },
