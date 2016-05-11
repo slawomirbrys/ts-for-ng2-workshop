@@ -1,5 +1,6 @@
 //TODO 1: AdminParams interface
 
+
 /*
  * TODO 2: new Admin(params) class:
  * Public properties:
@@ -12,7 +13,7 @@
  * + setLogin(value)
  * + getEncodedPassword()
  * Private methods:
- * - encodePassword(passwd) (encoded using private static property ENCODING_STR)
+ * - encodePassword() (encoded using private static property ENCODING_STR)
  * Private static properties:
  * - NEXT_UUID
  * - ENCODING_STR
