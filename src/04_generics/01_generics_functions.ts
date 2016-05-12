@@ -1,11 +1,13 @@
-// TODO 1a: Mapper interface
-// TODO 1b: gMap implementation
+// TODO 1: MapIterator interface; gMap function
 
-// TODO 2a: FilteringAlgorithm interface
-// TODO 2b: gFilter implementation
+// TODO 2: FilterIterator interface; gFilter function
 
-// TODO 3a: TestFunction interface
-// TODO 3b: gAll implementation
+// TODO 3: AllIterator interface; gAll function
 
-// TODO 4a: SliceIterator interface
-// TODO 4b: gEachSlice implementation
+// TODO 4: SliceIterator interface; gEachSlice function
+
+// TODO 5: ReduceIterator interface; gReduce function
+
+// TODO 6: gPluck function
+
+// TODO 7: interfaces: GroupByIterator & Grouped; gGroupBy function
