@@ -128,7 +128,7 @@ function eachSliceTest() {
     console.log("slice:", slice, "index:", index);
   };
 
-  eachSlice(arr, fn, 5);
+  eachSlice(arr, fn, 3);
   //
   // => slice: [1, 2, 3] index: 0
   // => slice: [4, 5, 6] index: 1
