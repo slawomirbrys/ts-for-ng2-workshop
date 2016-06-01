@@ -6,3 +6,6 @@ npm install -g typescript
 
 3. Install Typings - TS definition manager. Open console and run:
 npm install -g typings
+
+4. Enter project dir & run:
+npm install
