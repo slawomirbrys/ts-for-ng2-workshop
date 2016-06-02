@@ -1,6 +1,12 @@
+class Person {
+  constructor(public name : string) {
+  }
+}
 // TODO 1: generic Iterator interface
 
 // TODO 2: generic List interface
+// get(index)
+// size()
 
 // TODO 3: generic class ArrayIterator implementing Iterator interface
 
