@@ -20,13 +20,38 @@
  * Private static methods:
  * - generateUuid() (generates next uniq UUID)
  * */
+
+class Admin {
+
+  constructor(private params:AdminParams){
+
+  }
+
+  public uuid:number = 0;
+  getLogin() : string {
+    return this.params.login;
+  }
+
+  setLogin(login:string){
+    this.params.login = login;
+  }
+
+  getEncodedPassword() : string{
+    return this.params.password + "imba!";
+  }
+}
+
+class AdminParams {
+  constructor(public login:string, public password:string){}
+}
+
 function adminTest() {
   var login:string = "Bob";
   var passwd:string = "#secret!";
 
   // TODO: uncomment
-  /*
-  var params = {
+
+  var params : AdminParams = {
     login: login,
     password: passwd
   };
@@ -39,7 +64,7 @@ function adminTest() {
   console.assert(admin.getLogin() == login, "setLogin() should change login");
   console.assert(admin.getEncodedPassword() == passwd + "imba!", "getEncodedPassword() should encode password");
   console.log("adminTest passed");
-  */
+
 }
 
 adminTest();
