@@ -6,6 +6,11 @@ function random(max : number) : number {
   return Math.random() * max;
 }
 
+var dupa : number = 12;
+var dupa2 : string = "13";
+let dupa3 : boolean = true;
+
+
 console.log("random:", random(10));
 
 /*
